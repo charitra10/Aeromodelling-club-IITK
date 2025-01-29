@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeromodelling Club - IIT Kanpur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        /* Entrance Animation */
+        .entrance-animation {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeInGlow 2s forwards;
+            text-align: center;
+        }
+
+        @keyframes fadeInGlow {
+            0% {
+                opacity: 0;
+                text-shadow: 0 0 10px #00f7ff;
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+            }
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #000000;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #00f7ff;
+            box-shadow: 0 0 15px rgba(0, 247, 255, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #00f7ff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #00f7ff;
+        }
+
+        /* Section Common Styles */
+        section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #00f7ff;
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #0a0a0a, #000000);
+        }
+
+        .club-description {
+            max-width: 800px;
+            line-height: 1.6;
+            text-align: center;
+            color: #c0c0c0;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: #111111;
+            border-top: 1px solid #00f7ff55;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #00f7ff33;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 247, 255, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #222222;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        /* Team Section */
+        #team {
+            background-color: #000000;
+            border-top: 1px solid #00f7ff55;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 1rem;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid #00f7ff33;
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #222222;
+            margin: 0 auto 1rem;
+            border: 2px solid #00f7ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .entrance-animation {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="entrance-animation">Aeromodelling Club IITK</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Aeromodelling Club</h1>
+        <div class="club-description">
+            <p>We are a group of passionate students dedicated to pushing the boundaries of aerospace innovation. Specializing in radio-controlled aircraft and  drones, we combine engineering excellence with creative problem-solving.</p>
+            <br>
+            <p>Established in 2012, our team has consistently excelled in national competitions while fostering a culture of technical exploration and hands-on learning.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Our Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>Magnus Plane</h3>
+                <p>A plane that flies on the principles of the magnus effect.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-image"></div>
+                <h3>Acrobat Plane</h3>
+                <p>A fast and highly maneuoverable plane that was designed with agility and speed.</p>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+  <section id="team">
+        <h2>Our Team</h2>
+        
+        <div class="hierarchy-section">
+            <h2 class="role-badge">Club Coordinators</h2>
+            <div class="team-grid">
+                <!-- 4 Coordinators -->
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Harshita Chaudhary</h3>
+                 
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Ayush Agarwal</h3>
+                    
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Bharat Kumar Jangid</h3>
+                    
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Pranay Chaudhari</h3>
+                
+                </div>
+            </div>
+        </div>
+<div style="height: 2rem;"></div> <!-- Spacer div -->
+        <div class="hierarchy-section">
+            <h2 class="role-badge">Club Secretaries</h2>
+            <div class="team-grid">
+                <!-- 12 Secretaries -->
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Kirpa Singh</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Karan Gupta</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Ananya Narayani</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Muskan Yadav</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Shreya Amar Pazare</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>
+Vedant Pimparwar</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Ishani</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>
+Anshika Agrawal</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Karan Singh</h3>
+                   
+                </div>
+                 <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Palak Agarwal</h3>
+                   
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Udit Choudhary</h3>
+                   
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <h3>Lakshita Rathore</h3>
+                   
+                </div>
+                <!-- Repeat 11 more secretary entries -->
+            </div>
+        </div>
+    </section>
+    <script>
+        // Remove entrance animation after it plays
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.entrance-animation').style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
